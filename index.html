@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080d12" />
+  <title>Shadowfall: Red Ties</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-frame">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">影</span><span>SHADOWFALL</span><small>RED TIES</small></div>
+      <div class="topbar-status"><span class="status-dot"></span> ONLINE // ARENA 07</div>
+    </header>
+
+    <section class="game-shell" aria-label="Shadowfall fighting game">
+      <div class="hud hud-left">
+        <div class="fighter-label"><span class="fighter-icon p1-icon">01</span><div><b id="playerName">KAGE</b><small>RONIN // PLAYER 1</small></div></div>
+        <div class="health-track"><div id="playerHealth" class="health-fill player-fill"></div></div>
+        <div class="hud-meta"><span id="playerHealthText">100 HP</span><span id="playerStreak">STREAK 0</span></div>
+      </div>
+      <div class="round-readout"><span id="levelText">LEVEL 01</span><strong id="roundText">ROUND 1</strong><span id="modeText">SOLO // VS AI</span></div>
+      <div class="hud hud-right">
+        <div class="fighter-label enemy-label"><div><b id="enemyName">AKUMA</b><small>ROGUE // CPU</small></div><span class="fighter-icon cpu-icon">鬼</span></div>
+        <div class="health-track"><div id="enemyHealth" class="health-fill enemy-fill"></div></div>
+        <div class="hud-meta"><span id="enemyHealthText">100 HP</span><span id="enemyStatus">THREAT LOW</span></div>
+      </div>
+
+      <canvas id="arena" width="1280" height="720" aria-label="Fighting arena"></canvas>
+      <div id="startScreen" class="overlay visible">
+        <div class="title-lockup"><span>THE BAMBOO FRONTIER</span><h1>SHADOWFALL</h1><p>RED TIES // ONE LAST DUEL</p></div>
+        <div class="menu-actions"><button id="soloButton" class="primary-button">ENTER THE ARENA <span>↵</span></button><button id="twoPlayerButton" class="secondary-button">TWO PLAYER DUEL <span>⇧</span></button></div>
+        <p class="menu-hint">SPACE / ALT &nbsp; STRIKE <i></i> ENTER / CTRL &nbsp; LEAP</p>
+      </div>
+      <div id="levelScreen" class="overlay"><div class="level-card"><span id="resultKicker">LEVEL CLEARED</span><strong id="resultTitle">NIGHTFALL</strong><p id="resultDetail">The path opens. The next shadow waits.</p><button id="continueButton" class="primary-button">CONTINUE <span>↵</span></button></div></div>
+      <div id="gameOverScreen" class="overlay"><div class="level-card"><span>THE SHADOW ENDURES</span><strong>DEFEATED</strong><p id="gameOverDetail">The bamboo remembers every mistake.</p><button id="retryButton" class="primary-button">RETRY LEVEL <span>↵</span></button></div></div>
+      <div class="controls-strip"><span><b>P1</b> ENTER jump &nbsp; SPACE punch</span><span><b>P2</b> CTRL jump &nbsp; ALT punch</span><span>10 LEVELS // BEATABLE</span></div>
+    </section>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
